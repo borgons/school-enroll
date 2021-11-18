@@ -1,0 +1,61 @@
+@hostname = localhost:8000
+
+# POST http://{{hostname}}/auth/admin/login
+# Content-Type: application/json
+
+# {
+#    "adminID":22222,
+#    "adminPassword":"labrador"
+# }
+
+# POST http://{{hostname}}/auth/admin/signUp
+# Content-Type: application/json
+
+# {
+#    "adminID":22222,
+#    "adminFirst":"Justine",
+#    "adminLast":"Labrador",
+#    "adminPassword":"labrador",
+#    "adminConfirmPassword":"labrador"
+# }
+
+
+# GET http://{{hostname}}/auth/admin/adminUser
+# x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzdmMGExOGM4M2EwNmI4YTc0ZDIzNCIsImlhdCI6MTYzNTI1MDM1NywiZXhwIjoxNjM1MjUzOTU3fQ.V6BUBi2enkCHHThMosyaqtxy3v5yqkEf7b3AMfEs9sM
+
+# GET http://{{hostname}}/students/allStudents?page=2&skip=4
+
+# POST http://{{hostname}}/teachers/addTeachers
+# Content-Type: application/json
+# x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNzhlNzdlMjI3ZTk4MWM0NTg5YTcwYyIsImlhdCI6MTYzNTk5OTEyMywiZXhwIjoxNjM2MDAyNzIzfQ.3Q_DKsod1wXyt0xBf_0CqX7bSaUgz3L4jLMPTpbMQ1A
+
+# {
+#    "tchID":1000,
+#    "tchFirstName":"Yami",
+#    "tchLastName":"Yugi"
+   
+# }
+
+#----------------------------------------------
+
+# PUT http://{{hostname}}/teachers/61829842866c600b03419967
+# Content-Type: application/json
+
+#    {
+#       "tchID":1007,
+#       "tchFirstName":"Virgilio",
+#       "tchLastName":"Godinez"
+#    }
+
+
+
+GET http://localhost:8000/teachers/allTeachers
+
+# PUT http://{{hostname}}/teachers/assignRemoveStudents/1000
+# Content-Type: application/json
+
+# {
+#    "tchStudents":"616451d0ecf687bc5f59faca"
+# }
+
+# DELETE http://{{hostname}}/teachers/1000
